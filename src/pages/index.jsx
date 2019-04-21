@@ -9,13 +9,26 @@ const Hero = styled.header`
   background-color: ${props => props.theme.colors.greyLight};
   display: flex;
   align-items: center;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
 `
 
 const HeroInner = styled(Wrapper)`
+  position: absolute;
   padding-top: 13rem;
   padding-bottom: 13rem;
-  h1 {
-    margin-bottom: 2rem;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+  h1,
+  p,
+  a {
+    color: ${props => props.theme.colors.greyLight};
   }
   @media (max-width: ${props => props.theme.breakpoints.l}) {
     padding-top: 10rem;
@@ -31,10 +44,29 @@ const HeroInner = styled(Wrapper)`
   }
 `
 
+const HeroVideo = styled.video`
+  position: relative;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+`
+
+const HeroOverlay = styled.div`
+  position: absolute;
+  min-height: 100%;
+  min-width: 100%;
+  width: auto;
+  height: auto;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+`
+
 const HeroText = styled.div`
   font-size: 1.7rem;
   line-height: 1.4;
-  margin-bottom: 2rem;
+  // margin-bottom: 2rem;
   @media (max-width: ${props => props.theme.breakpoints.m}) {
     font-size: 1.4rem;
   }
@@ -60,7 +92,7 @@ const Social = styled.ul`
     }
     a {
       font-style: normal;
-      color: ${props => props.theme.colors.greyDark};
+      color: ${props => props.theme.colors.white};
       font-size: 1.333rem;
       font-weight: 600;
       &:hover,
@@ -102,6 +134,10 @@ class Index extends Component {
     return (
       <Layout>
         <Hero>
+          <HeroVideo playsinline="playsinline" autoPlay="autoplay" muted="muted" loop="loop">
+            <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4" />
+          </HeroVideo>
+          <HeroOverlay />
           <HeroInner>
             <h1>{homepage.data.title.text}</h1>
             <HeroText dangerouslySetInnerHTML={{ __html: homepage.data.content.html }} />
