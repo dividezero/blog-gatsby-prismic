@@ -54,10 +54,8 @@ const HeroVideo = styled.video`
 
 const HeroOverlay = styled.div`
   position: absolute;
-  min-height: 100%;
+  min-height: 100vh;
   min-width: 100%;
-  width: auto;
-  height: auto;
   margin: 0px;
   background-color: black;
   opacity: 0.5;
