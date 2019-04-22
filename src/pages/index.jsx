@@ -58,6 +58,7 @@ const HeroOverlay = styled.div`
   min-width: 100%;
   width: auto;
   height: auto;
+  margin: 0px;
   background-color: black;
   opacity: 0.5;
   z-index: 1;
