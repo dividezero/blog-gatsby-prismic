@@ -4,6 +4,7 @@ A typography-heavy & light-themed Gatsby Starter which uses the Headless CMS [Pr
 
 [Demo Website](https://prismic.lekoarts.de)
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/adb40a6cb5fe4e3bb460f57991ed789f)](https://app.codacy.com/app/dividezero/blog-gatsby-prismic?utm_source=github.com&utm_medium=referral&utm_content=dividezero/blog-gatsby-prismic&utm_campaign=Badge_Grade_Settings)
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/LekoArts/gatsby-starter-prismic)
 
 [![CircleCI](https://circleci.com/gh/LekoArts/gatsby-starter-prismic.svg?style=svg)](https://circleci.com/gh/LekoArts/gatsby-starter-prismic) [![Netlify Status](https://api.netlify.com/api/v1/badges/f06e32cf-ef46-4544-b37d-0de548c0ea1b/deploy-status)](https://app.netlify.com/sites/gatsby-starter-prismic/deploys)
